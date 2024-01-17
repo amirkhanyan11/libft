@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/18 01:36:24 by kali             ###   ########.fr       */
+/*   Created: 2024/01/18 00:26:38 by kali              #+#    #+#             */
+/*   Updated: 2024/01/18 00:28:45 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+int ft_isalpha(int c);
+int ft_isdigit(int c);
 
-
-int main()
+int ft_isalnum(int c)
 {
-	//char str[] = "jujs mec a";
-	printf("%c\n", ft_toupper('s'));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
+

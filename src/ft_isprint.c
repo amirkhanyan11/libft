@@ -1,20 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/18 01:36:24 by kali             ###   ########.fr       */
+/*   Created: 2024/01/18 00:26:55 by kali              #+#    #+#             */
+/*   Updated: 2024/01/18 00:28:00 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-
-int main()
+int ft_isprint(int c)
 {
-	//char str[] = "jujs mec a";
-	printf("%c\n", ft_toupper('s'));
+	return ((const unsigned char)c > 31 && (const unsigned char)c < 127);
 }

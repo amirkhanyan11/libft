@@ -2,7 +2,6 @@
 # define LIBFT_H
 
 #include <stdio.h>
-#include <libc.h>
 #include <ctype.h>
 #include <string.h>
 

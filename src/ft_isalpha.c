@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/18 01:36:24 by kali             ###   ########.fr       */
+/*   Created: 2024/01/18 00:26:45 by kali              #+#    #+#             */
+/*   Updated: 2024/01/18 00:31:00 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-
-int main()
+static int _is_upper(char c)
 {
-	//char str[] = "jujs mec a";
-	printf("%c\n", ft_toupper('s'));
+	return ((c >= 'A' && c <= 'Z'));
+}
+
+static int _is_lower(char c)
+{
+	return ((c >= 'a' && c <= 'z'));
+}
+
+int ft_isalpha(int c)
+{
+	return (_is_upper(c) || _is_lower(c));
 }

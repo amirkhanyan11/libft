@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/18 01:36:24 by kali             ###   ########.fr       */
+/*   Created: 2024/01/18 01:26:38 by kali              #+#    #+#             */
+/*   Updated: 2024/01/18 01:37:03 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-
-int main()
+static int _is_upper(char c)
 {
-	//char str[] = "jujs mec a";
-	printf("%c\n", ft_toupper('s'));
+	return ((c >= 'A' && c <= 'Z'));
+}
+
+int ft_tolower(int c)
+{
+	if (_is_upper(c))
+		c += 32;
+	return (c);
 }
