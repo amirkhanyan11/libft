@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/18 22:07:35 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/18 00:26:53 by kali              #+#    #+#             */
+/*   Updated: 2024/01/18 17:17:07 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/aamirkha/Desktop/libft/libft.h"
+#include "libft.h"
 
-
-int main()
+int ft_isdigit(int c)
 {
-	char dest[30];
-	memset(dest, 0, 30);
-	char *src = (char *)"AAAAAAAAA";
-	memset(dest, 'B', 4);
-	printf("%d\n", ft_strlcat(dest, src, 6) == 13 && !strcmp(dest, "BBBBA"));
+	return (c >= '0' && c <= '9');
 }

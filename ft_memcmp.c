@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/18 22:07:35 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/18 01:07:25 by kali              #+#    #+#             */
+/*   Updated: 2024/01/18 17:17:07 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/aamirkha/Desktop/libft/libft.h"
+#include "libft.h"
 
+int	ft_strncmp(const char *str1, const char *str2, size_t n);
 
-int main()
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char dest[30];
-	memset(dest, 0, 30);
-	char *src = (char *)"AAAAAAAAA";
-	memset(dest, 'B', 4);
-	printf("%d\n", ft_strlcat(dest, src, 6) == 13 && !strcmp(dest, "BBBBA"));
+	return (ft_strncmp((const char *)s1, (const char *)s2, n));
 }

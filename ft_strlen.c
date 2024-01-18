@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/18 22:07:35 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/18 01:17:57 by kali              #+#    #+#             */
+/*   Updated: 2024/01/18 17:17:07 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/aamirkha/Desktop/libft/libft.h"
+#include "libft.h"
 
-
-int main()
+size_t	ft_strlen(const char *str)
 {
-	char dest[30];
-	memset(dest, 0, 30);
-	char *src = (char *)"AAAAAAAAA";
-	memset(dest, 'B', 4);
-	printf("%d\n", ft_strlcat(dest, src, 6) == 13 && !strcmp(dest, "BBBBA"));
+	size_t	len;
+
+	if (str == 0)
+		return (0);
+	len = 0;
+	while (*str)
+	{
+		str++;
+		len++;
+	}
+	return (len);
 }

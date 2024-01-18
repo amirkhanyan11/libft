@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/18 22:07:35 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/18 01:26:38 by kali              #+#    #+#             */
+/*   Updated: 2024/01/18 17:40:55 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/aamirkha/Desktop/libft/libft.h"
+#include "libft.h"
 
-
-int main()
+static int _is_upper(char c)
 {
-	char dest[30];
-	memset(dest, 0, 30);
-	char *src = (char *)"AAAAAAAAA";
-	memset(dest, 'B', 4);
-	printf("%d\n", ft_strlcat(dest, src, 6) == 13 && !strcmp(dest, "BBBBA"));
+	return ((c >= 'A' && c <= 'Z'));
+}
+
+int ft_tolower(int c)
+{
+	if (_is_upper(c))
+		c += 32;
+	return (c);
 }

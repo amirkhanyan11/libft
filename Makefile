@@ -5,7 +5,7 @@ SRC = ./src/
 EXEC = a.out
 ROOT = ./
 
-FILES = $(wildcard $(SRC)*.c)
+FILES = $(wildcard $(ROOT)*.c)
 # OBJS = $(FILES:.c=.o)
 OBJS = $(ROOT)*.o
 
