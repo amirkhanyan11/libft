@@ -19,19 +19,16 @@
 	// printf("%d\n", ft_strlcat(dest, src, 6) == 13 && !strcmp(dest, "BBBBA"));
 
 
+
+	// BBBB\0    AAAAAAAAA\0   6  BBBBA\0
+
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	lim;
 	size_t	srclen;
 	size_t	dstlen;
 
 	srclen = ft_strlen(src);
 	dstlen = ft_strlen(dst);
-	lim = dstlen + srclen;
-	if (dstsize < dstlen)
-		return (srclen + dstsize);
-	if (!(dst == 0 || src == 0))
-		(void)ft_strlcpy(dst + dstlen, src, (dstsize - dstlen + 1));
-	dst[lim - 1] = '\0';
-	return (lim);
+	(void)ft_strlcpy(dst + dstlen, src, (dstsize - dstlen));
+	return (dstlen + srclen);
 }
