@@ -18,8 +18,6 @@
 	// memset(dest, 'B', 4);
 	// printf("%d\n", ft_strlcat(dest, src, 6) == 13 && !strcmp(dest, "BBBBA"));
 
-
-
 	// BBBB\0    AAAAAAAAA\0   6  BBBBA\0
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
@@ -29,6 +27,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	srclen = ft_strlen(src);
 	dstlen = ft_strlen(dst);
+	if(dstsize <= dstlen)
+	{
+		return (dstsize + srclen);
+	}
 	(void)ft_strlcpy(dst + dstlen, src, (dstsize - dstlen));
 	return (dstlen + srclen);
 }
