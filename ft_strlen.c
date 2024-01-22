@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/22 18:41:53 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/18 01:17:57 by kali              #+#    #+#             */
+/*   Updated: 2024/01/18 17:17:07 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/aamirkha/Desktop/libft/libft.h"
+#include "libft.h"
 
-int main()
+size_t	ft_strlen(const char *str)
 {
-	char haystack[30] = "aaabcabcd";
-	char needle[10] = "aabc";
-	//char * empty = (char*)"";
+	size_t	len;
 
-	printf("%d\n", ft_strnstr(haystack, needle, 0) == 0);
+	if (str == 0)
+		return (0);
+	len = 0;
+	while (*str)
+	{
+		str++;
+		len++;
+	}
+	return (len);
 }

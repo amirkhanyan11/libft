@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/22 18:41:53 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/18 01:07:25 by kali              #+#    #+#             */
+/*   Updated: 2024/01/22 16:28:38 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/aamirkha/Desktop/libft/libft.h"
+#include "libft.h"
 
-int main()
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char haystack[30] = "aaabcabcd";
-	char needle[10] = "aabc";
-	//char * empty = (char*)"";
-
-	printf("%d\n", ft_strnstr(haystack, needle, 0) == 0);
+	return (ft_strncmp((const char *)s1, (const char *)s2, n));
 }

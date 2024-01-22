@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/22 18:41:53 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/18 01:26:38 by kali              #+#    #+#             */
+/*   Updated: 2024/01/22 16:11:41 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/aamirkha/Desktop/libft/libft.h"
+#include "libft.h"
 
-int main()
+static	int	_is_upper(char c)
 {
-	char haystack[30] = "aaabcabcd";
-	char needle[10] = "aabc";
-	//char * empty = (char*)"";
+	return ((c >= 'A' && c <= 'Z'));
+}
 
-	printf("%d\n", ft_strnstr(haystack, needle, 0) == 0);
+int	ft_tolower(int c)
+{
+	if (_is_upper(c))
+		c += 32;
+	return (c);
 }

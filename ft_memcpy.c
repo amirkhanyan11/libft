@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/22 18:41:53 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/18 16:11:25 by aamirkha          #+#    #+#             */
+/*   Updated: 2024/01/18 17:17:07 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/aamirkha/Desktop/libft/libft.h"
+#include "libft.h"
 
-int main()
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char haystack[30] = "aaabcabcd";
-	char needle[10] = "aabc";
-	//char * empty = (char*)"";
+	char	*t_dst;
+	char	*t_src;
 
-	printf("%d\n", ft_strnstr(haystack, needle, 0) == 0);
+	t_dst = (char *)dst;
+	t_src = (char *)src;
+	if (dst == 0 || src == 0)
+		return (dst);
+	while (n)
+	{
+		*(t_dst++) = *(t_src++);
+		n--;
+	}
+	return (dst);
 }

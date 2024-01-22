@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/22 18:41:53 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/18 00:26:45 by kali              #+#    #+#             */
+/*   Updated: 2024/01/22 16:10:38 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/aamirkha/Desktop/libft/libft.h"
+#include "libft.h"
 
-int main()
+static	int	_is_upper(char c)
 {
-	char haystack[30] = "aaabcabcd";
-	char needle[10] = "aabc";
-	//char * empty = (char*)"";
+	return ((c >= 'A' && c <= 'Z'));
+}
 
-	printf("%d\n", ft_strnstr(haystack, needle, 0) == 0);
+static	int	_is_lower(char c)
+{
+	return ((c >= 'a' && c <= 'z'));
+}
+
+int	ft_isalpha(int c)
+{
+	return (_is_upper(c) || _is_lower(c));
 }

@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/22 18:41:53 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/18 00:46:44 by kali              #+#    #+#             */
+/*   Updated: 2024/01/22 18:30:08 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/aamirkha/Desktop/libft/libft.h"
+#include "libft.h"
 
-int main()
+void	*ft_memset(void *b, int c, size_t len)
 {
-	char haystack[30] = "aaabcabcd";
-	char needle[10] = "aabc";
-	//char * empty = (char*)"";
+	size_t			i;
+	unsigned char	*str;
 
-	printf("%d\n", ft_strnstr(haystack, needle, 0) == 0);
+	if (b == 0 || len == 0)
+		return (b);
+	i = 0;
+	str = (unsigned char *)b;
+	while (i < len)
+	{
+		str[i++] = (unsigned char)c;
+	}
+	return (b);
 }

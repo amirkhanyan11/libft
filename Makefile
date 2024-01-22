@@ -1,10 +1,12 @@
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRC = ./
+SRC = ./src/
+EXEC = a.out
+ROOT = ./
 
-FILES = $(wildcard $(SRC)*.c)
-OBJS = $(FILES:.c=.o)
+FILES = $(wildcard $(ROOT)*.c)
+OBJS = $(ROOT)*.o
 
 .PHONY:  all clean fclean re
 
@@ -16,10 +18,11 @@ $(NAME) : $(OBJS)
 $(OBJS) : $(FILES)
 	$(CC) $(CFLAGS) -c $(FILES)
 
+
 clean:
 	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(EXEC)
 
 re: fclean all
