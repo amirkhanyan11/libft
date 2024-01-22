@@ -6,13 +6,13 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 00:26:55 by kali              #+#    #+#             */
-/*   Updated: 2024/01/18 17:17:07 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/22 16:07:43 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	return ((const unsigned char)c > 31 && (const unsigned char)c < 127);
 }

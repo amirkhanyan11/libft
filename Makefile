@@ -6,7 +6,6 @@ EXEC = a.out
 ROOT = ./
 
 FILES = $(wildcard $(ROOT)*.c)
-# OBJS = $(FILES:.c=.o)
 OBJS = $(ROOT)*.o
 
 .PHONY:  all clean fclean re

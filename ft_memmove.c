@@ -6,7 +6,7 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 17:14:29 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/18 17:48:59 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/22 16:09:01 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	void	*rtn;
 	char	*t_src;
 
-	t_src = ft_strdup((char*)src, len);
+	t_src = ft_strdup((char *)src, len);
 	rtn = dst;
 	if (t_src != 0)
 		rtn = ft_memcpy(dst, t_src, len);

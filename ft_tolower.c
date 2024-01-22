@@ -6,18 +6,18 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 01:26:38 by kali              #+#    #+#             */
-/*   Updated: 2024/01/18 17:40:55 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/22 16:11:41 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int _is_upper(char c)
+static	int	_is_upper(char c)
 {
 	return ((c >= 'A' && c <= 'Z'));
 }
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (_is_upper(c))
 		c += 32;

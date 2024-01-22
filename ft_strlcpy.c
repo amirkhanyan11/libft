@@ -6,7 +6,7 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 18:43:07 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/18 21:31:16 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/22 18:15:17 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,6 @@ static size_t	_ft_min(size_t a, size_t b)
 		return (a);
 	return (b);
 }
-
-	// char dest[30];
-	// memset(dest, 0, 30);
-	// char *src = (char *)"AAAAAAAAA";
-	// memset(dest, 'B', 4);
-	// ft_strlcat(dest, src, 6) == 13
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

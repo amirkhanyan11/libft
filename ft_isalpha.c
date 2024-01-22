@@ -6,24 +6,23 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 00:26:45 by kali              #+#    #+#             */
-/*   Updated: 2024/01/18 17:40:48 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/22 16:10:38 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int _is_upper(char c)
+static	int	_is_upper(char c)
 {
 	return ((c >= 'A' && c <= 'Z'));
 }
 
-static int _is_lower(char c)
+static	int	_is_lower(char c)
 {
 	return ((c >= 'a' && c <= 'z'));
 }
 
-
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	return (_is_upper(c) || _is_lower(c));
 }

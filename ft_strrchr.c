@@ -6,21 +6,22 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 01:22:14 by kali              #+#    #+#             */
-/*   Updated: 2024/01/18 18:41:46 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/22 16:11:15 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void _swap(char	*a, char	*b)
+static	void	_swap(char	*a, char	*b)
 {
 	char	c;
+
 	c = *a;
 	*a = *b;
 	*b = c;
 }
 
-static void _reverse(char *str, int len)
+static	void	_reverse(char *str, int len)
 {
 	int	i;
 

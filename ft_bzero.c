@@ -6,7 +6,7 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 00:47:18 by kali              #+#    #+#             */
-/*   Updated: 2024/01/18 17:36:52 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/22 19:13:43 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	if(n == 0)
-		return;
+	if (n == 0)
+		return ;
 	s = ft_memset(s, 0, n);
 }
