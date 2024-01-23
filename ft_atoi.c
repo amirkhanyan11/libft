@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 15:05:38 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/23 15:29:29 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/24 01:10:37 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 static	int	_ft_is_space(char c)
 {
-	return (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r' || c == ' ');
+	return (c == '\t' || c == '\n'
+		|| c == '\v' || c == '\f' || c == '\r' || c == ' ');
 }
 
 static	int	_ft_to_digit(char c)
@@ -22,7 +23,7 @@ static	int	_ft_to_digit(char c)
 	return (c - '0');
 }
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	long long	res;
 	int			sign;
