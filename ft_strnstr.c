@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 17:45:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/23 00:17:12 by kali             ###   ########.fr       */
+/*   Updated: 2024/01/23 15:01:27 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,6 @@ static size_t	_ft_min(size_t a, size_t b)
 		return (a);
 	return (b);
 }
-
-	// char * empty = (char*)"";
-
-	// printf("%d\n", ft_strnstr(empty, "", 0) == empty);
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
