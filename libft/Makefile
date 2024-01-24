@@ -22,7 +22,7 @@ $(OBJS) : $(FILES)
 
 so: $(OBJS)
 	$(CC) -fPIC $(CFLAGS) $(FILES)
-	gcc -shared -o libft.so $(OBJS)
+	gcc -shared -o $(DYNAMIC) $(OBJS)
 
 
 clean:
