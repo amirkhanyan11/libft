@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 16:39:07 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/24 19:21:10 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/24 20:03:00 by aamirkha          #+#    #+#             */
+/*   Updated: 2024/01/24 20:16:12 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	_sign_check(long long lcount, long long lsize)
+static	char	*_join(char const *s1, char const *s2)
 {
-	return ((lcount < 0 && lsize != 0) || (lcount != 0 && lsize < 0));
+	char	*join;
+	size_t	lenjoin;
+
+	lenjoin = ft_strlen(s1) + ft_strlen(s2) + 1;
+	join = (char *)malloc(lenjoin);
+	if (join)
+	{
+		(void)ft_strlcpy(join, s1, lenjoin);
+		(void)ft_strlcat(join, s2, lenjoin);
+	}
+	return (join);
 }
 
-static	int	_max_check(long long lcount, long long lsize)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	return (lsize >= INT_MAX || lcount >= INT_MAX);
-}
-
-void	*ft_calloc(size_t count, size_t size)
-{
-	void	*rtn;
-
-	if (_sign_check(count, size) || _max_check(count, size))
+	if (!s1 || !s2)
 		return (NULL);
-	rtn = malloc(size * count);
-	if (rtn)
-		ft_bzero(rtn, (size * count));
-	return (rtn);
+	return (_join(s1, s2));
 }

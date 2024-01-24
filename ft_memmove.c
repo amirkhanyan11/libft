@@ -6,7 +6,7 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 17:14:29 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/23 17:18:07 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/23 17:45:07 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static char	*_ft_strdup(char *src, size_t len)
 
 	if (src == 0)
 		return (0);
-	dest = (char *)malloc(ft_strlen(src) + 1);
+	dest = (char *)ft_calloc(ft_strlen(src) + 1, 1);
 	if (dest == 0)
 		return (0);
 	i = 0;
