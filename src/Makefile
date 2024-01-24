@@ -1,7 +1,7 @@
 STATIC = libft.a
 DYNAMIC = libft.so
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -c
 SRC = ./src/
 EXEC = a.out
 ROOT = ./
@@ -18,10 +18,10 @@ $(STATIC) : $(OBJS)
 	ar -rcs $(STATIC) $(OBJS)
 
 $(OBJS) : $(FILES)
-	$(CC) $(CFLAGS) -c $(FILES)
+	$(CC) $(CFLAGS) $(FILES)
 
-so: $(STATIC)
-	$(CC) -fPIC $(CFLAGS) -c $(FILES)
+so: $(OBJS)
+	$(CC) -fPIC $(CFLAGS) $(FILES)
 	gcc -shared -o libft.so $(OBJS)
 
 

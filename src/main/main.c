@@ -6,11 +6,11 @@
 /*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/25 00:42:12 by kali             ###   ########.fr       */
+/*   Updated: 2024/01/25 01:14:13 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/home/kali/Desktop/libft/libft.h"
+#include "/home/kali/Desktop/libft/src/libft.h"
 
 int main()
 {
