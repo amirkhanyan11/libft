@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 01:11:17 by kali              #+#    #+#             */
-/*   Updated: 2024/01/18 17:59:05 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/18 01:07:25 by kali              #+#    #+#             */
+/*   Updated: 2024/01/25 18:39:26 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *str1, const char *str2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	if (str1 == 0 || str2 == 0 || n == 0)
-		return (0);
+	char const	*str1;
+	char const	*str2;
+
+	str1 = (char const *)s1;
+	str2 = (char const *)s2;
 	while (n > 1)
 	{
 		if (*str1 != *str2)

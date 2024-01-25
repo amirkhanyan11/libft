@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 00:26:55 by kali              #+#    #+#             */
-/*   Updated: 2024/01/22 16:07:43 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
+/*   Updated: 2024/01/25 18:54:35 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "/home/kali/Desktop/libft/libft/libft.h"
 
-int	ft_isprint(int c)
+int main()
 {
-	return ((const unsigned char)c > 31 && (const unsigned char)c < 127);
+	char *ptr = ft_itoa(INT_MIN);
+	printf("%s\n", ptr);
+	free(ptr);
+	return 0;
 }

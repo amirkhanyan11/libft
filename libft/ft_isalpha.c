@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 00:47:18 by kali              #+#    #+#             */
-/*   Updated: 2024/01/23 16:46:10 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/18 00:26:45 by kali              #+#    #+#             */
+/*   Updated: 2024/01/25 17:21:12 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+static	int	_is_upper(int c)
 {
-	if (n == 0)
-		return ;
-	s = ft_memset(s, 0, n);
+	return ((c >= 'A' && c <= 'Z'));
+}
+
+static	int	_is_lower(int c)
+{
+	return ((c >= 'a' && c <= 'z'));
+}
+
+int	ft_isalpha(int c)
+{
+	return (_is_upper(c) || _is_lower(c));
 }

@@ -3,43 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 17:14:29 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/23 17:45:07 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/25 18:42:50 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*_ft_strdup(char *src, size_t len)
-{
-	char	*dest;
-	size_t	i;
-
-	if (src == 0)
-		return (0);
-	dest = (char *)ft_calloc(ft_strlen(src) + 1, 1);
-	if (dest == 0)
-		return (0);
-	i = 0;
-	while (i < len)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	return (dest);
-}
-
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	void	*rtn;
-	char	*t_src;
+	int	i;
 
-	t_src = _ft_strdup((char *)src, len);
-	rtn = dst;
-	if (t_src != 0)
-		rtn = ft_memcpy(dst, t_src, len);
-	free(t_src);
-	return (rtn);
+	if (!dst && !src && len)
+		return (dst);
+	if (len && src < dst)
+	{
+		i = len - 1;
+		while (i >= 0)
+		{
+			((char *const)dst)[i] = ((char *const)src)[i];
+			i--;
+		}
+	}
+	else
+		ft_memcpy(dst, src, len);
+	return (dst);
 }
