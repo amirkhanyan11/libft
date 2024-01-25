@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 21:21:48 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/24 22:27:11 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/25 18:40:03 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ static	char	**_allocate(char const *str, char c, size_t words)
 	if (!arr)
 		return (NULL);
 	arr[words] = NULL;
-
 	i = 0;
 	while (i < words)
 	{

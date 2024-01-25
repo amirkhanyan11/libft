@@ -6,7 +6,7 @@
 /*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 19:27:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/25 16:40:19 by kali             ###   ########.fr       */
+/*   Updated: 2024/01/25 18:54:35 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int main()
 {
-
-
-	printf("%d\n", ft_atoi("2147483647"));
+	char *ptr = ft_itoa(INT_MIN);
+	printf("%s\n", ptr);
+	free(ptr);
 	return 0;
 }

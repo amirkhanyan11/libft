@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 01:13:52 by kali              #+#    #+#             */
-/*   Updated: 2024/01/24 20:21:56 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/25 18:39:47 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static char	*_allocate(char const *s, size_t dstlen)
 
 	dst = (char *)malloc(dstlen + 1);
 	if (dst)
-		(void)ft_strlcpy(dst, s, dstlen + 1);
+		ft_strlcpy(dst, s, dstlen + 1);
 	return (dst);
 }
 
@@ -42,6 +42,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	srclen;
 
+	if (!s)
+		return (_allocate_null());
 	srclen = ft_strlen(s);
 	if (start > srclen)
 		return (_allocate_null());

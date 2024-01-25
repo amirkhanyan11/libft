@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 00:26:55 by kali              #+#    #+#             */
-/*   Updated: 2024/01/22 16:07:43 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/25 17:21:37 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isprint(int c)
 {
-	return ((const unsigned char)c > 31 && (const unsigned char)c < 127);
+	return (c > 31 && c < 127);
 }

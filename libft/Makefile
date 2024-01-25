@@ -20,7 +20,10 @@ $(STATIC) : $(OBJS)
 $(OBJS) : $(FILES)
 	$(CC) $(CFLAGS) $(FILES)
 
-so: $(OBJS)
+so: $(DYNAMIC)
+
+$(DYNAMIC) : $(OBJS)
+
 	$(CC) -fPIC $(CFLAGS) $(FILES)
 	gcc -shared -o $(DYNAMIC) $(OBJS)
 
