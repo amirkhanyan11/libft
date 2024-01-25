@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 00:26:45 by kali              #+#    #+#             */
-/*   Updated: 2024/01/22 16:10:38 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/18 00:26:55 by kali              #+#    #+#             */
+/*   Updated: 2024/01/25 17:21:37 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	_is_upper(char c)
+int	ft_isprint(int c)
 {
-	return ((c >= 'A' && c <= 'Z'));
-}
-
-static	int	_is_lower(char c)
-{
-	return ((c >= 'a' && c <= 'z'));
-}
-
-int	ft_isalpha(int c)
-{
-	return (_is_upper(c) || _is_lower(c));
+	return (c > 31 && c < 127);
 }

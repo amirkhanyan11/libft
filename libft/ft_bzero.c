@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 17:15:16 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/23 17:19:18 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/18 00:47:18 by kali              #+#    #+#             */
+/*   Updated: 2024/01/25 15:57:59 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_bzero(void *s, size_t n)
 {
-	char	*dest;
-	size_t	i;
-
-	if (s1 == 0)
-		return (0);
-	dest = (char *)ft_calloc(ft_strlen(s1) + 1, 1);
-	if (dest == 0)
-		return (0);
-	i = 0;
-	while (s1[i])
-	{
-		dest[i] = s1[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	ft_memset(s, 0, n);
 }
