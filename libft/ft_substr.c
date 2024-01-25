@@ -6,11 +6,27 @@
 /*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 01:13:52 by kali              #+#    #+#             */
-/*   Updated: 2024/01/25 19:31:17 by kali             ###   ########.fr       */
+/*   Updated: 2024/01/26 01:13:56 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	_ft_min(size_t a, size_t b);
+static char		*_allocate_null(void);
+static char		*_allocate(char const *s, size_t dstlen);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	size_t	srclen;
+
+	if (!s)
+		return (_allocate_null());
+	srclen = ft_strlen(s);
+	if (start > srclen)
+		return (_allocate_null());
+	return (_allocate(s + start, _ft_min(srclen - start, len)));
+}
 
 static size_t	_ft_min(size_t a, size_t b)
 {
@@ -36,16 +52,4 @@ static char	*_allocate(char const *s, size_t dstlen)
 	if (dst)
 		ft_strlcpy(dst, s, dstlen + 1);
 	return (dst);
-}
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	size_t	srclen;
-
-	if (!s)
-		return (_allocate_null());
-	srclen = ft_strlen(s);
-	if (start > srclen)
-		return (_allocate_null());
-	return (_allocate(s + start, _ft_min(srclen - start, len)));
 }
