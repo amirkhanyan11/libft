@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 01:13:52 by kali              #+#    #+#             */
-/*   Updated: 2024/01/24 20:21:56 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/25 19:09:23 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static char	*_allocate(char const *s, size_t dstlen)
 
 	dst = (char *)malloc(dstlen + 1);
 	if (dst)
-		(void)ft_strlcpy(dst, s, dstlen + 1);
+		ft_strlcpy(dst, s, dstlen + 1);
 	return (dst);
 }
 
