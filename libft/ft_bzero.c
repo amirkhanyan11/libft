@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 00:47:18 by kali              #+#    #+#             */
-/*   Updated: 2024/01/23 16:46:10 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/25 15:57:59 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	if (n == 0)
-		return ;
-	s = ft_memset(s, 0, n);
+	ft_memset(s, 0, n);
 }
