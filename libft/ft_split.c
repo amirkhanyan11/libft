@@ -6,7 +6,7 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 21:21:48 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/26 15:32:22 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/26 17:58:09 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static size_t	_count_words(char const *s, char const c);
 static size_t	_current_len(char const **str, char const c);
 static char		**_allocate(char const *str, char const c, size_t const SIZE);
-static void		_skip_delimiters(char const **str, char const c);
+static void		_skip_deallocate(char const **str, char const c, t_Mode mode);
 
 char	**ft_split(char const *s, char c)
 {
@@ -31,7 +31,7 @@ static	size_t	_count_words(char const *s, char const c)
 
 	words = 0;
 	flag = 0;
-	_skip_delimiters(&s, c);
+	_skip_deallocate(&s, c, SKIP);
 	while (*s)
 	{
 		if (*s != c)
@@ -59,10 +59,23 @@ static	size_t	_current_len(char const **str, char const c)
 	return (len);
 }
 
-static void	_skip_delimiters(char const **str, char const c)
+static void	_skip_deallocate(char const **str, char const c, t_Mode mode)
 {
-	while (**str && **str == c)
-		(*str)++;
+	int	i;
+
+	if (mode == DEALLOCATE)
+	{
+		i = c;
+		while (i >= 0)
+		{
+			free((void *)str[i]);
+			i--;
+		}
+		free(str);
+	}
+	else
+		while (**str && **str == c)
+			(*str)++;
 }
 
 static	char	**_allocate(char const *str, char const c, size_t const SIZE)
@@ -79,10 +92,12 @@ static	char	**_allocate(char const *str, char const c, size_t const SIZE)
 	i = 0;
 	while (i < SIZE)
 	{
-		_skip_delimiters(&str, c);
+		_skip_deallocate(&str, c, SKIP);
 		tmp = (char *)str;
 		current_len = _current_len(&str, c) + 1;
 		arr[i] = (char *)malloc(current_len);
+		if (!arr[i])
+			_skip_deallocate((char const **)arr, i, DEALLOCATE);
 		ft_strlcpy(arr[i], tmp, current_len);
 		i++;
 	}

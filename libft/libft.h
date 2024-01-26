@@ -6,7 +6,7 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 16:12:13 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/26 14:21:03 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/26 17:46:34 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@
 # include <limits.h>
 # include <stddef.h>
 
-enum e_Mode
+typedef enum e_Mode
 {
-	EXIT,
+	SKIP,
 	DEALLOCATE
-};
+}	t_Mode;
 
 // PART I
 // is_smth.h
