@@ -6,7 +6,7 @@
 /*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:19:38 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/26 01:28:12 by kali             ###   ########.fr       */
+/*   Updated: 2024/01/27 01:38:16 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,6 @@ static	char	*_allocate(char const *src, size_t const dstsize)
 
 	dst = (char *)malloc(dstsize);
 	if (dst)
-		(void)ft_strlcpy(dst, src, dstsize);
+		ft_strlcpy(dst, src, dstsize);
 	return (dst);
 }

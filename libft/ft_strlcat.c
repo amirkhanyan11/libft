@@ -6,7 +6,7 @@
 /*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 20:58:30 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/25 16:35:10 by kali             ###   ########.fr       */
+/*   Updated: 2024/01/27 01:15:30 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dstlen = ft_strlen(dst);
 	if (dstsize <= dstlen)
 		return (dstsize + srclen);
-	ft_strlcpy(dst + dstlen, src, (dstsize - dstlen));
-	return (dstlen + srclen);
+	return (dstlen + ft_strlcpy(dst + dstlen, src, (dstsize - dstlen)));
 }

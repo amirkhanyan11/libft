@@ -6,11 +6,21 @@
 /*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 18:08:03 by kali              #+#    #+#             */
-/*   Updated: 2024/01/25 18:40:51 by kali             ###   ########.fr       */
+/*   Updated: 2024/01/27 01:19:59 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	_digit_count(int const n);
+static int		_calculate_size(int const n);
+static char		_to_char(int n);
+static char		*_allocate(int n);
+
+char	*ft_itoa(int n)
+{
+	return (_allocate(n));
+}
 
 static	size_t	_digit_count(int const n)
 {
@@ -54,9 +64,4 @@ static	char	*_allocate(int n)
 	if (sign)
 		dst[0] = '-';
 	return (dst);
-}
-
-char	*ft_itoa(int n)
-{
-	return (_allocate(n));
 }

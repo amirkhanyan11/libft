@@ -3,14 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:03:00 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/24 20:16:12 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/27 01:27:23 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static	char	*_join(char const *s1, char const *s2);
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	if (!s1 || !s2)
+		return (NULL);
+	return (_join(s1, s2));
+}
 
 static	char	*_join(char const *s1, char const *s2)
 {
@@ -25,11 +34,4 @@ static	char	*_join(char const *s1, char const *s2)
 		(void)ft_strlcat(join, s2, lenjoin);
 	}
 	return (join);
-}
-
-char	*ft_strjoin(char const *s1, char const *s2)
-{
-	if (!s1 || !s2)
-		return (NULL);
-	return (_join(s1, s2));
 }

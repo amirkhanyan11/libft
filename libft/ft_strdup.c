@@ -6,7 +6,7 @@
 /*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 17:15:16 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/25 17:22:05 by kali             ###   ########.fr       */
+/*   Updated: 2024/01/27 01:26:48 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	size_t	i;
 
 	dest = (char *)ft_calloc(ft_strlen(s1) + 1, 1);
-	if (dest == 0)
+	if (!dest)
 		return (0);
 	i = 0;
 	while (s1[i])

@@ -6,7 +6,7 @@
 /*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 16:11:25 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/25 16:04:04 by kali             ###   ########.fr       */
+/*   Updated: 2024/01/27 01:20:36 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	t_dst = (char *)dst;
 	t_src = (char *)src;
-	if (dst == 0 && src == 0)
+	if (!dst && !src)
 		return (dst);
 	while (n)
 	{
