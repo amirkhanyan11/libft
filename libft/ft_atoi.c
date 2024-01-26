@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 15:05:38 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/25 17:50:34 by kali             ###   ########.fr       */
+/*   Updated: 2024/01/26 21:16:25 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ int	ft_atoi(const char *str)
 	}
 	while (ft_isdigit(*str))
 	{
-		if (res > INT_MAX || res < INT_MIN)
-			return (0);
 		res = ((res * 10) + _ft_to_digit(*str));
 		str++;
 	}

@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/26 01:46:30 by kali              #+#    #+#             */
-/*   Updated: 2024/01/26 21:16:53 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/26 21:22:40 by aamirkha          #+#    #+#             */
+/*   Updated: 2024/01/26 21:28:54 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+static char	_to_char(int n)
 {
-	unsigned int	i;
+	return (n + '0');
+}
 
-	if (!s || !f)
-		return ;
-	i = 0;
-	while (s[i])
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (n == INT_MIN)
 	{
-		f(i, s + i);
-		i++;
+		ft_putstr_fd("-2147483648", fd);
+		return ;
 	}
+	if (n < 0)
+	{
+		n *= -1;
+		ft_putchar_fd('-', fd);
+	}
+	if (n < 10)
+	{
+		ft_putchar_fd(_to_char(n), fd);
+		return ;
+	}
+	ft_putnbr_fd((n / 10), fd);
+	ft_putnbr_fd((n % 10), fd);
 }
