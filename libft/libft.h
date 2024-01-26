@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 16:12:13 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/26 01:47:07 by kali             ###   ########.fr       */
+/*   Updated: 2024/01/26 14:21:03 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <stddef.h>
+
+enum e_Mode
+{
+	EXIT,
+	DEALLOCATE
+};
 
 // PART I
 // is_smth.h

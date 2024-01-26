@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 21:21:48 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/26 01:20:53 by kali             ###   ########.fr       */
+/*   Updated: 2024/01/26 15:32:22 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ static	char	**_allocate(char const *str, char const c, size_t const SIZE)
 	size_t	current_len;
 	size_t	i;
 
-	arr = (char **)malloc(SIZE + 1);
+	arr = (char **)malloc((SIZE + 1) * sizeof(char *));
 	if (!arr)
 		return (NULL);
 	arr[SIZE] = NULL;
@@ -83,7 +83,7 @@ static	char	**_allocate(char const *str, char const c, size_t const SIZE)
 		tmp = (char *)str;
 		current_len = _current_len(&str, c) + 1;
 		arr[i] = (char *)malloc(current_len);
-		(void)ft_strlcpy(arr[i], tmp, current_len);
+		ft_strlcpy(arr[i], tmp, current_len);
 		i++;
 	}
 	return (arr);

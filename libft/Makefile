@@ -27,7 +27,6 @@ $(DYNAMIC) : $(OBJS)
 	$(CC) -fPIC $(CFLAGS) $(FILES)
 	gcc -shared -o $(DYNAMIC) $(OBJS)
 
-
 clean:
 	rm -f $(OBJS)
 
