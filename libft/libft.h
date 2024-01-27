@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 16:12:13 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/27 01:39:51 by kali             ###   ########.fr       */
+/*   Updated: 2024/01/27 17:32:45 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <limits.h>
 # include <stddef.h>
 # include <unistd.h>
+# include "_bonus.h"
 
 typedef enum e_Mode
 {

@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 01:07:25 by kali              #+#    #+#             */
-/*   Updated: 2024/01/27 17:22:56 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/27 19:41:10 by aamirkha          #+#    #+#             */
+/*   Updated: 2024/01/27 19:43:30 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "_bonus.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int		ft_lstsize(t_list *lst)
 {
-	if (!n)
+	if (!lst)
 		return (0);
-	while (n > 1)
-	{
-		if (*((char const *)s1) != *((char const *)s2))
-			break ;
-		s1++;
-		s2++;
-		n--;
-	}
-	return (*(const unsigned char *)s1 - *(const unsigned char *)s2);
+	return (1 + ft_lstsize(lst->next));
 }

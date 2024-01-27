@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 01:07:25 by kali              #+#    #+#             */
-/*   Updated: 2024/01/27 17:22:56 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/27 20:12:55 by aamirkha          #+#    #+#             */
+/*   Updated: 2024/01/27 20:22:31 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "_bonus.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+static void	_deallocate(t_list **lst, void (*del)(void *));
+
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if (!n)
-		return (0);
-	while (n > 1)
-	{
-		if (*((char const *)s1) != *((char const *)s2))
-			break ;
-		s1++;
-		s2++;
-		n--;
-	}
-	return (*(const unsigned char *)s1 - *(const unsigned char *)s2);
+	if (!lst || !(*lst) || !del)
+		return ;
+	_deallocate(lst, del);
+	lst = NULL;
+}
+
+static void	_deallocate(t_list **lst, void (*del)(void *))
+{
+	if (!(*lst))
+		return ;
+	_deallocate(&((*lst)->next), del);
+	ft_lstdelone((*lst), del);
+	(*lst) = NULL;
 }

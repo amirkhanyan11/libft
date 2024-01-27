@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 01:07:25 by kali              #+#    #+#             */
-/*   Updated: 2024/01/27 17:22:56 by aamirkha         ###   ########.fr       */
+/*   Created: 2024/01/27 20:24:42 by aamirkha          #+#    #+#             */
+/*   Updated: 2024/01/27 20:27:48 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "_bonus.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+static void	_lstiter(t_list *lst, void (*f)(void *));
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!n)
-		return (0);
-	while (n > 1)
-	{
-		if (*((char const *)s1) != *((char const *)s2))
-			break ;
-		s1++;
-		s2++;
-		n--;
-	}
-	return (*(const unsigned char *)s1 - *(const unsigned char *)s2);
+	if (lst && f)
+		_lstiter(lst, f);
+}
+
+static void	_lstiter(t_list *lst, void (*f)(void *))
+{
+	if (!lst)
+		return ;
+	f(lst->content);
+	_lstiter(lst->next, f);
 }
