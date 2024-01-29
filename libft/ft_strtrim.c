@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:19:38 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/29 20:01:41 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/29 22:53:27 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 static	void	_move_ptrs(char **left, char **right, char const *set)
 {
-	while (((*left) != '\0') && ft_memchr(set, **left, ft_strlen(set)))
+	while (((*left)) && ft_memchr(set, **left, ft_strlen(set)))
 		++(*left);
 	while (((*right) >= (*left)) && ft_memchr(set, **right, ft_strlen(set)))
 		--(*right);
