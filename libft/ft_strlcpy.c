@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 18:43:07 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/27 01:35:11 by kali             ###   ########.fr       */
+/*   Updated: 2024/01/29 17:56:50 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	srcsize;
 	size_t	len;
 
+	if (!src)
+		return (0);
 	srcsize = ft_strlen(src);
 	len = _ft_min(dstsize, srcsize + 1);
 	if (dst)
 	{
 		ft_memmove(dst, src, len);
-		dst[len - 1] = '\0';
+		if (len)
+			dst[len - 1] = '\0';
 	}
 	return (srcsize);
 }

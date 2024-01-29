@@ -6,7 +6,7 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 17:29:41 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/27 19:25:55 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/29 17:29:49 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*ptr = (t_list *)malloc(sizeof(t_list));
+	t_list	*ptr;
+
+	ptr = (t_list *)malloc(sizeof(t_list));
 	if (!ptr)
 		return (NULL);
 	ptr->content = content;

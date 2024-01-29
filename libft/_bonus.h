@@ -6,12 +6,12 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 17:15:39 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/27 20:29:43 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/29 17:26:11 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BONUS_H
-# define BONUS_H
+#ifndef _BONUS_H
+# define _BONUS_H
 
 # include "libft.h"
 

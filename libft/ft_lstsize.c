@@ -6,13 +6,13 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 19:41:10 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/27 19:43:30 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/29 17:45:25 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "_bonus.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	if (!lst)
 		return (0);
