@@ -27,4 +27,4 @@ alias get_testers="cd ~/Desktop/libft/libft && git clone git@github.com:Tripouil
 
 alias delete_testers="rm -rf ~/Desktop/libft/libft/tripoulle_test ~/Desktop/libft/libft/war-machine ~/Desktop/libft/unit-test"
 
-alias update_testers="delete testers && get_testers"
+alias update_testers="delete_testers && get_testers"
