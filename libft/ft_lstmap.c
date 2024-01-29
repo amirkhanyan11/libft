@@ -6,11 +6,11 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:28:28 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/29 17:29:15 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/29 20:09:06 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "_bonus.h"
+#include "libft.h"
 
 static void	_lstmap(t_list *other, t_list **head,
 				void *(*f)(void *), void (*del)(void *));

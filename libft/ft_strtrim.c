@@ -6,7 +6,7 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:19:38 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/29 17:51:27 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/29 20:01:41 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 static	void	_move_ptrs(char **left, char **right, char const *set)
 {
-	while (ft_strchr(set, **left))
+	while (((*left) != '\0') && ft_memchr(set, **left, ft_strlen(set)))
 		++(*left);
-	while (ft_strchr(set, **right))
+	while (((*right) >= (*left)) && ft_memchr(set, **right, ft_strlen(set)))
 		--(*right);
 }
 

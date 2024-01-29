@@ -6,11 +6,11 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:24:42 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/29 17:06:10 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/29 20:09:06 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "_bonus.h"
+#include "libft.h"
 
 static void	_lstiter(t_list *lst, void (*f)(void *));
 

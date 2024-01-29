@@ -6,11 +6,11 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 19:44:58 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/29 17:27:37 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/29 20:09:06 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "_bonus.h"
+#include "libft.h"
 
 static t_list	*_get_lstlast(t_list *lst);
 static int		_cycle_detect(t_list *lst);
