@@ -27,8 +27,6 @@ $(NAME) : $(OBJS)
 $(OBJS) : $(MANDATORY)
 	$(CC) $(CFLAGS) $(MANDATORY)
 
-so: $(DYNAMIC)
-
 bonus: $(NAME) $(BONUS_OBJS)
 
 	ar -rcs $(NAME) $(BONUS_OBJS)
@@ -36,10 +34,12 @@ bonus: $(NAME) $(BONUS_OBJS)
 $(BONUS_OBJS) : $(BONUS)
 	$(CC) $(CFLAGS) $(BONUS)
 
-$(DYNAMIC) : $(OBJS)
+so: $(DYNAMIC)
+
+$(DYNAMIC) : $(OBJS) $(BONUS_OBJS)
 
 	$(CC) -fPIC $(CFLAGS) $(MANDATORY)
-	gcc -shared -o $(DYNAMIC) $(OBJS)
+	gcc -shared -o $(DYNAMIC) $(OBJS) $(BONUS_OBJS)
 
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
