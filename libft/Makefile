@@ -22,7 +22,7 @@ BONUS_OBJS = $(BONUS:.c=.o)
 
 .PHONY:  all clean fclean re so bonus
 
-all: bonus $(NAME)
+all: $(NAME)
 
 $(NAME) : $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
@@ -32,7 +32,7 @@ $(OBJS) : $(MANDATORY)
 
 so: $(DYNAMIC)
 
-bonus: $(BONUS_OBJS)
+bonus: $(NAME) $(BONUS_OBJS)
 
 	ar -rcs $(NAME) $(BONUS_OBJS)
 
