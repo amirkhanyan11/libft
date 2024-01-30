@@ -1,5 +1,5 @@
 NAME = libft.a
-DYNAMIC = libft.so
+SHARED = libft.so
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -c
 EXEC = a.out
@@ -49,17 +49,17 @@ update_testers : delete_testers get_testers
 $(BONUS_OBJS) : $(BONUS)
 	$(CC) $(CFLAGS) $(BONUS)
 
-so : $(DYNAMIC)
+so : $(SHARED)
 
-$(DYNAMIC) : $(OBJS) $(BONUS_OBJS)
+$(SHARED) : $(OBJS) $(BONUS_OBJS)
 
 	$(CC) -fPIC $(CFLAGS) $(MANDATORY)
-	gcc -shared -o $(DYNAMIC) $(OBJS) $(BONUS_OBJS)
+	gcc -shared -o $(SHARED) $(OBJS) $(BONUS_OBJS)
 
 clean :
 	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean : clean
-	rm -f $(NAME) $(DYNAMIC) $(EXEC) ./main/*.so
+	rm -f $(NAME) $(SHARED) $(EXEC) ./main/*.so
 
 re : fclean all
