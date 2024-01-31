@@ -6,7 +6,7 @@
 /*   By: aamirkha <aamirkha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 17:45:46 by aamirkha          #+#    #+#             */
-/*   Updated: 2024/01/29 20:18:44 by aamirkha         ###   ########.fr       */
+/*   Updated: 2024/01/31 15:41:07 by aamirkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		i = 0;
 		while (i <= (lim - len_ndl))
 		{
-			if (!strncmp(haystack + i, needle, len_ndl))
+			if (!ft_strncmp(haystack + i, needle, len_ndl))
 				return ((char *)haystack + i);
 			i++;
 		}
